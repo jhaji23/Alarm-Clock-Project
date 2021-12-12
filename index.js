@@ -39,25 +39,31 @@ function ringing(now) {
     audio.play();
 
 
-    // let hour = now.slice(0, 2);
-    // let minutes = now.slice(3);
-    // const curr = `${hour}:${minutes}`;
+    let hour = now.slice(0, 2);
+    let minutes = now.slice(3);
+    const curr = `${hour}:${minutes}`;
     pauseBtn.addEventListener('click', function () {
 
-        // let index = alarmList.indexOf(curr);
-        // alarmList.splice(index, 1);
-
-
+        let index = alarmList.indexOf(curr);
+       
+        alarmList.splice(index, 1);
 
         // console.log("pause clicked");
 
 
-        audio.pause();
+        audio.pause();  
+        
+        function reInsert(){
+        alarmList.push(curr);
+        }
+        setInterval(reInsert, 60000);
 
 
     }
 
     )
+
+    
 
 
 }
@@ -134,4 +140,3 @@ addAlarm.addEventListener('click', function () {
 
 
 setInterval(updateTime, 1000);
-// setInterval(ringing, 1000);

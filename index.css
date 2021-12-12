@@ -25,6 +25,8 @@ h1{
     text-align: center;
     padding-top: 0px;
     margin-top: 0px;
+    border: 4px solid yellow;
+   
     
 }
 
@@ -74,3 +76,4 @@ h2{
 .alarm-list{
     margin-right: 20px;
 }
+
